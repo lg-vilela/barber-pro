@@ -24,70 +24,84 @@ const data = [
 export const Dashboard: React.FC = () => {
   return (
     <div className="p-8 w-full max-w-[1600px] mx-auto animate-fade-in">
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-white mb-1">Visão Geral</h2>
-        <p className="text-slate-400 text-sm">Acompanhe as métricas da sua barbearia hoje.</p>
+      {/* Hero Section */}
+      <div className="relative w-full h-48 md:h-64 rounded-3xl overflow-hidden mb-8 border border-white/10 shadow-2xl">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2074&auto=format&fit=crop")' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent flex flex-col justify-center px-8 md:px-12">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">Visão Geral</h2>
+          <p className="text-slate-300 text-sm md:text-base max-w-lg">
+            Bem-vindo de volta. Acompanhe a performance da sua barbearia em tempo real.
+          </p>
+        </div>
       </div>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {/* Card 1: Revenue */}
-        <div className="bg-card-dark rounded-2xl p-6 border border-white/5 relative overflow-hidden group hover:border-gold-accent/30 transition-colors">
-          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+        {/* Card 1: Revenue - Leather Style */}
+        <div className="bg-card-dark rounded-2xl p-6 border border-white/5 relative overflow-hidden group hover:border-gold-accent/50 transition-all duration-500 shadow-lg hover:shadow-gold-accent/10">
+          <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')] pointer-events-none mix-blend-overlay"></div>
+          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
             <DollarSign size={100} />
           </div>
-          <div className="flex justify-between items-start mb-4">
-            <div className="p-3 rounded-xl bg-gold-accent/10 text-gold-accent">
+          <div className="flex justify-between items-start mb-4 relative z-10">
+            <div className="p-3 rounded-xl bg-gradient-to-br from-gold-accent/20 to-yellow-900/20 text-gold-accent border border-gold-accent/10">
               <DollarSign size={24} />
             </div>
-            <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 rounded-lg">
-              <TrendingUp size={14} className="text-green-500" />
-              <span className="text-green-500 text-xs font-bold">+12%</span>
+            <div className="flex items-center gap-1 bg-green-500/10 px-2.5 py-1 rounded-lg border border-green-500/20 backdrop-blur-sm">
+              <TrendingUp size={14} className="text-green-400" />
+              <span className="text-green-400 text-xs font-bold">+12%</span>
             </div>
           </div>
-          <div>
-            <p className="text-slate-400 text-sm font-medium mb-1">Faturamento do Dia</p>
-            <p className="text-white text-4xl font-extrabold tracking-tight">R$ 1.250<span className="text-xl text-slate-500 font-medium">,00</span></p>
+          <div className="relative z-10">
+            <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Faturamento do Dia</p>
+            <p className="text-white text-4xl font-display font-bold tracking-tight text-shadow-sm">
+              R$ 1.250<span className="text-xl text-slate-500 font-body font-medium">,00</span>
+            </p>
           </div>
         </div>
 
-        {/* Card 2: Appointments */}
-        <div className="bg-card-dark rounded-2xl p-6 border border-white/5 relative overflow-hidden group hover:border-primary/30 transition-colors">
-          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+        {/* Card 2: Appointments - Metal Style */}
+        <div className="bg-card-dark rounded-2xl p-6 border border-white/5 relative overflow-hidden group hover:border-primary/50 transition-all duration-500 shadow-lg hover:shadow-primary/10">
+          <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] pointer-events-none mix-blend-overlay"></div>
+          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
             <Calendar size={100} />
           </div>
-          <div className="flex justify-between items-start mb-4">
-            <div className="p-3 rounded-xl bg-zinc-800 text-white">
+          <div className="flex justify-between items-start mb-4 relative z-10">
+            <div className="p-3 rounded-xl bg-gradient-to-br from-zinc-700 to-zinc-900 text-white border border-white/10 shadow-inner">
               <Calendar size={24} />
             </div>
-            <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 rounded-lg">
-              <TrendingUp size={14} className="text-green-500" />
-              <span className="text-green-500 text-xs font-bold">+5%</span>
+            <div className="flex items-center gap-1 bg-green-500/10 px-2.5 py-1 rounded-lg border border-green-500/20 backdrop-blur-sm">
+              <TrendingUp size={14} className="text-green-400" />
+              <span className="text-green-400 text-xs font-bold">+5%</span>
             </div>
           </div>
-          <div>
-            <p className="text-slate-400 text-sm font-medium mb-1">Agendamentos Totais</p>
-            <p className="text-white text-4xl font-extrabold tracking-tight">14</p>
+          <div className="relative z-10">
+            <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Agendamentos</p>
+            <p className="text-white text-4xl font-display font-bold tracking-tight">14</p>
           </div>
         </div>
 
-        {/* Card 3: New Clients */}
-        <div className="bg-card-dark rounded-2xl p-6 border border-white/5 relative overflow-hidden group hover:border-purple-500/30 transition-colors">
-          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
+        {/* Card 3: New Clients - Dark Wood/Classic Style */}
+        <div className="bg-card-dark rounded-2xl p-6 border border-white/5 relative overflow-hidden group hover:border-neon-orange/50 transition-all duration-500 shadow-lg hover:shadow-neon-orange/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-surface-dark to-black opacity-80"></div>
+          <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
             <UserPlus size={100} />
           </div>
-          <div className="flex justify-between items-start mb-4">
-            <div className="p-3 rounded-xl bg-purple-500/20 text-purple-400">
+          <div className="flex justify-between items-start mb-4 relative z-10">
+            <div className="p-3 rounded-xl bg-gradient-to-br from-neon-orange/20 to-red-900/20 text-neon-orange border border-neon-orange/10">
               <UserPlus size={24} />
             </div>
-            <div className="flex items-center gap-1 bg-slate-700/30 px-2 py-1 rounded-lg">
+            <div className="flex items-center gap-1 bg-slate-700/30 px-2.5 py-1 rounded-lg border border-white/5 backdrop-blur-sm">
               <Minus size={14} className="text-slate-400" />
               <span className="text-slate-400 text-xs font-bold">0%</span>
             </div>
           </div>
-          <div>
-            <p className="text-slate-400 text-sm font-medium mb-1">Novos Clientes</p>
-            <p className="text-white text-4xl font-extrabold tracking-tight">3</p>
+          <div className="relative z-10">
+            <p className="text-slate-400 text-sm font-medium mb-1 uppercase tracking-wider">Novos Clientes</p>
+            <p className="text-white text-4xl font-display font-bold tracking-tight">3</p>
           </div>
         </div>
       </div>

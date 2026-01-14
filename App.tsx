@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
+import { BottomNav } from './components/BottomNav';
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { Agenda } from './components/Agenda';
@@ -11,11 +12,16 @@ const App: React.FC = () => {
   return (
     <div className="flex h-screen w-full bg-gradient-to-br from-background-dark to-zinc-900 font-body antialiased overflow-hidden selection:bg-primary/30 text-slate-200">
 
-      {/* Sidebar Navigation */}
-      <Sidebar currentView={currentView} onChange={setCurrentView} />
+      {/* Sidebar Navigation - Hidden on Mobile */}
+      <div className="hidden md:flex h-full shrink-0">
+        <Sidebar currentView={currentView} onChange={setCurrentView} />
+      </div>
+
+      {/* Bottom Navigation - Visible ONLY on Mobile */}
+      <BottomNav currentView={currentView} onChange={setCurrentView} />
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col h-full min-w-0">
+      <div className="flex-1 flex flex-col h-full min-w-0 relative pb-20 md:pb-0">
 
         {/* Top Header */}
         <Header />

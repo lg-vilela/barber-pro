@@ -17,7 +17,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onChange }) => {
   ];
 
   return (
-    <aside className="w-64 bg-card-dark border-r border-white/5 flex flex-col h-full shrink-0">
+    <aside className="w-64 bg-surface-dark border-r border-white/5 flex flex-col h-full shrink-0">
       {/* Logo Area */}
       <div className="h-20 flex items-center px-6 border-b border-white/5 gap-3">
         <div className="w-10 h-10 bg-gradient-to-br from-primary to-yellow-700 rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
@@ -42,8 +42,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onChange }) => {
               key={item.id}
               onClick={() => item.id !== 'financial' && onChange(item.id as ViewState)}
               className={`flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group ${isActive
-                  ? 'bg-primary text-white shadow-lg shadow-primary/20'
-                  : 'text-slate-400 hover:bg-white/5 hover:text-white'
+                ? 'bg-primary text-white shadow-lg shadow-primary/20'
+                : 'text-slate-400 hover:bg-white/5 hover:text-white'
                 }`}
             >
               <Icon size={20} className={isActive ? 'text-white' : 'text-slate-400 group-hover:text-white transition-colors'} />

@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewState>('dashboard');
 
   return (
-    <div className="flex h-screen w-full bg-background-dark font-display antialiased overflow-hidden selection:bg-primary/30 text-slate-200">
+    <div className="flex h-screen w-full bg-background-dark font-body antialiased overflow-hidden selection:bg-primary/30 text-slate-200">
       
       {/* Sidebar Navigation */}
       <Sidebar currentView={currentView} onChange={setCurrentView} />
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Header />
 
         {/* View Content */}
-        <main className="flex-1 overflow-y-auto scrollbar-hide bg-gradient-to-br from-background-dark to-[#0f151c]">
+        <main className="flex-1 overflow-y-auto scrollbar-hide bg-background-dark">
           {currentView === 'dashboard' && <Dashboard />}
           {currentView === 'agenda' && <Agenda />}
           

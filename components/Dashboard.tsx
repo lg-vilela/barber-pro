@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  TrendingUp, 
-  DollarSign, 
-  Calendar, 
-  UserPlus, 
-  Scissors, 
-  Star, 
+import {
+  TrendingUp,
+  DollarSign,
+  Calendar,
+  UserPlus,
+  Scissors,
+  Star,
   Minus,
   MoreHorizontal
 } from 'lucide-react';
@@ -57,7 +57,7 @@ export const Dashboard: React.FC = () => {
             <Calendar size={100} />
           </div>
           <div className="flex justify-between items-start mb-4">
-            <div className="p-3 rounded-xl bg-primary/20 text-primary">
+            <div className="p-3 rounded-xl bg-zinc-800 text-white">
               <Calendar size={24} />
             </div>
             <div className="flex items-center gap-1 bg-green-500/10 px-2 py-1 rounded-lg">
@@ -94,7 +94,7 @@ export const Dashboard: React.FC = () => {
 
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
+
         {/* Chart Section (2/3 width) */}
         <div className="lg:col-span-2 bg-card-dark rounded-2xl p-6 border border-white/5">
           <div className="flex items-center justify-between mb-6">
@@ -106,41 +106,41 @@ export const Dashboard: React.FC = () => {
               <MoreHorizontal size={20} />
             </button>
           </div>
-          
+
           <div className="h-[300px] w-full">
-             <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={data} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
                 <defs>
                   <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#137fec" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#137fec" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#D4AF37" stopOpacity={0.3} />
+                    <stop offset="95%" stopColor="#D4AF37" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#334155" opacity={0.3} />
-                <XAxis 
-                  dataKey="name" 
-                  axisLine={false} 
-                  tickLine={false} 
-                  tick={{fill: '#64748b', fontSize: 12, fontWeight: '500'}} 
-                  dy={10}
-                />
-                <YAxis 
+                <XAxis
+                  dataKey="name"
                   axisLine={false}
                   tickLine={false}
-                  tick={{fill: '#64748b', fontSize: 12}}
+                  tick={{ fill: '#64748b', fontSize: 12, fontWeight: '500' }}
+                  dy={10}
                 />
-                <Tooltip 
-                   contentStyle={{backgroundColor: '#1b2531', borderColor: '#334155', borderRadius: '8px', color: '#fff'}}
-                   itemStyle={{color: '#fff'}}
-                   cursor={{stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2}}
+                <YAxis
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fill: '#64748b', fontSize: 12 }}
                 />
-                <Area 
-                  type="monotone" 
-                  dataKey="value" 
-                  stroke="#137fec" 
+                <Tooltip
+                  contentStyle={{ backgroundColor: '#1b2531', borderColor: '#334155', borderRadius: '8px', color: '#fff' }}
+                  itemStyle={{ color: '#fff' }}
+                  cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 2 }}
+                />
+                <Area
+                  type="monotone"
+                  dataKey="value"
+                  stroke="#D4AF37"
                   strokeWidth={3}
-                  fillOpacity={1} 
-                  fill="url(#colorValue)" 
+                  fillOpacity={1}
+                  fill="url(#colorValue)"
                 />
               </AreaChart>
             </ResponsiveContainer>
@@ -158,14 +158,14 @@ export const Dashboard: React.FC = () => {
             {/* Item 1 */}
             <div className="flex items-center gap-4 bg-background-dark/50 rounded-xl p-3 border border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
               <div className="relative shrink-0">
-                <div 
+                <div
                   className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border border-white/10"
                   style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcIeyRCF0x3pLHWxw13tCijXCYfjjxJCupuedPYsKm2Jd4kLH22b28ntELzh30LIpChUHcR-IoQ6Oc_iGbk1x1-Ak8sGGS6zIUyZrb17ccC-q3MGhDJajon9Fc7EMoa6djNlb4J4odwYrYc_IUvVgl1gv1EQDQ0ubEGGYd8LReaXKbEmexJUVoUVT9F2rtA3eKlMKfor6_nz4G_h__Ygg5fXXxFlRc99XxIdHPwszxxWoOiMaic_sxLaYflGlhNEdP6hlgLnBFGIo")' }}
                 />
                 <div className="absolute -bottom-1 -right-1 bg-background-dark p-0.5 rounded-full">
-                   <div className="bg-primary w-4 h-4 rounded-full flex items-center justify-center">
+                  <div className="bg-primary w-4 h-4 rounded-full flex items-center justify-center">
                     <Scissors size={8} className="text-white" />
-                   </div>
+                  </div>
                 </div>
               </div>
               <div className="flex flex-col flex-1 justify-center">
@@ -180,7 +180,7 @@ export const Dashboard: React.FC = () => {
             {/* Item 2 */}
             <div className="flex items-center gap-4 bg-background-dark/50 rounded-xl p-3 border border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
               <div className="relative shrink-0">
-                <div 
+                <div
                   className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border border-white/10"
                   style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcMlEDwnzNkKi8-RAXWD9LoqudSm4OOnHxQx5y0_zk9CDsDFmqthrJAjtqxcFB9LMRVriMrr5iuWZjXmzHQRYWt6kD87_8I_xqXuwnpX29zVlaUm7ff0CkKhw5ponPiclQlRVXtMbWiS4eQ20DDfRRuVf8J0Ck9EyLYbFGRED-RjwgmB0UvpDLzQ8SBQKw7NledevdWh6NPnmAgxLjM37iz3jsKxOFkkEEz9Meb98LM9c9r2b66zSSWFj8gwVYdojiVjPvvcGnYUU")' }}
                 />
@@ -202,7 +202,7 @@ export const Dashboard: React.FC = () => {
             {/* Item 3 */}
             <div className="flex items-center gap-4 bg-background-dark/50 rounded-xl p-3 border border-white/5 hover:bg-white/5 transition-colors cursor-pointer group">
               <div className="relative shrink-0">
-                <div 
+                <div
                   className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border border-white/10"
                   style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4yxBXscC2_uNQJxH0ZsrLhY1UyFR084fNmHY9-6ZS4BJeuJXO4GNikr4UuERKGGpiSa9xecPS6wPbKPRZYlex7rXNEmXeW2XUiWeRjxSNOc95Oh46AHIRbMgZzuoA6vE46xU2K0kZOz9mTPdSKebrpEilfWEb785bopuI-asyQoBQwnwbKKwgIuMI19-7bt-qxNEje6nd8oSXzfwj8wVeoe8wZQe_8IDoqHx8ukfeG7FSn61wE6pT23Vc3-O_00xAiNLZOl3zmU4")' }}
                 />
@@ -216,11 +216,11 @@ export const Dashboard: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="p-4 mt-auto border-t border-white/5">
-             <button className="w-full py-2.5 rounded-xl border border-white/10 text-sm font-bold hover:bg-white/5 transition-colors">
-               Novo Agendamento
-             </button>
+            <button className="w-full py-2.5 rounded-xl border border-white/10 text-sm font-bold hover:bg-white/5 transition-colors">
+              Novo Agendamento
+            </button>
           </div>
         </div>
       </div>

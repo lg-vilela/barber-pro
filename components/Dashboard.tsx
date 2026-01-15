@@ -174,7 +174,7 @@ export const Dashboard: React.FC = () => {
               <div className="relative shrink-0">
                 <div
                   className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border border-white/10"
-                  style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcIeyRCF0x3pLHWxw13tCijXCYfjjxJCupuedPYsKm2Jd4kLH22b28ntELzh30LIpChUHcR-IoQ6Oc_iGbk1x1-Ak8sGGS6zIUyZrb17ccC-q3MGhDJajon9Fc7EMoa6djNlb4J4odwYrYc_IUvVgl1gv1EQDQ0ubEGGYd8LReaXKbEmexJUVoUVT9F2rtA3eKlMKfor6_nz4G_h__Ygg5fXXxFlRc99XxIdHPwszxxWoOiMaic_sxLaYflGlhNEdP6hlgLnBFGIo")' }}
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")' }}
                 />
                 <div className="absolute -bottom-1 -right-1 bg-background-dark p-0.5 rounded-full">
                   <div className="bg-primary w-4 h-4 rounded-full flex items-center justify-center">
@@ -196,7 +196,7 @@ export const Dashboard: React.FC = () => {
               <div className="relative shrink-0">
                 <div
                   className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border border-white/10"
-                  style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcMlEDwnzNkKi8-RAXWD9LoqudSm4OOnHxQx5y0_zk9CDsDFmqthrJAjtqxcFB9LMRVriMrr5iuWZjXmzHQRYWt6kD87_8I_xqXuwnpX29zVlaUm7ff0CkKhw5ponPiclQlRVXtMbWiS4eQ20DDfRRuVf8J0Ck9EyLYbFGRED-RjwgmB0UvpDLzQ8SBQKw7NledevdWh6NPnmAgxLjM37iz3jsKxOFkkEEz9Meb98LM9c9r2b66zSSWFj8gwVYdojiVjPvvcGnYUU")' }}
+                  style={{ backgroundImage: 'url("https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")' }}
                 />
                 <div className="absolute -bottom-1 -right-1 bg-background-dark p-0.5 rounded-full">
                   <div className="bg-gold-accent w-4 h-4 rounded-full flex items-center justify-center">
@@ -218,7 +218,7 @@ export const Dashboard: React.FC = () => {
               <div className="relative shrink-0">
                 <div
                   className="bg-center bg-no-repeat bg-cover rounded-full h-12 w-12 border border-white/10"
-                  style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4yxBXscC2_uNQJxH0ZsrLhY1UyFR084fNmHY9-6ZS4BJeuJXO4GNikr4UuERKGGpiSa9xecPS6wPbKPRZYlex7rXNEmXeW2XUiWeRjxSNOc95Oh46AHIRbMgZzuoA6vE46xU2K0kZOz9mTPdSKebrpEilfWEb785bopuI-asyQoBQwnwbKKwgIuMI19-7bt-qxNEje6nd8oSXzfwj8wVeoe8wZQe_8IDoqHx8ukfeG7FSn61wE6pT23Vc3-O_00xAiNLZOl3zmU4")' }}
+                  style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")' }}
                 />
               </div>
               <div className="flex flex-col flex-1 justify-center">

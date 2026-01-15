@@ -20,9 +20,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onChange }) => {
     <aside className="w-64 bg-surface-dark border-r border-white/5 flex flex-col h-full shrink-0">
       {/* Logo Area */}
       <div className="h-20 flex items-center px-6 border-b border-white/5 gap-3">
-        <img 
-          src="https://i.postimg.cc/W1zqSsZ2/Hair-cut-removebg-preview.png" 
-          alt="HairCut Logo" 
+        <img
+          src="https://i.postimg.cc/W1zqSsZ2/Hair-cut-removebg-preview.png"
+          alt="HairCut Logo"
           className="w-12 h-12 object-contain"
         />
         <div>
@@ -36,13 +36,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onChange }) => {
         <p className="px-3 text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Menu Principal</p>
 
         {menuItems.map((item) => {
-          const isActive = currentView === item.id || (item.id === 'financial' && currentView === 'dashboard' && false);
+          const isActive = currentView === item.id;
           const Icon = item.icon;
 
           return (
             <button
               key={item.id}
-              onClick={() => item.id !== 'financial' && onChange(item.id as ViewState)}
+              onClick={() => onChange(item.id as ViewState)}
               className={`flex items-center gap-3 px-3 py-3 rounded-xl transition-all duration-200 group ${isActive
                 ? 'bg-primary text-white shadow-lg shadow-primary/20'
                 : 'text-slate-400 hover:bg-white/5 hover:text-white'

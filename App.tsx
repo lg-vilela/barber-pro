@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { Agenda } from './components/Agenda';
 import { Clients } from './components/Clients';
+import { Financial } from './components/Financial';
 import { ViewState } from './types';
 
 const App: React.FC = () => {
@@ -33,6 +34,7 @@ const App: React.FC = () => {
           {currentView === 'agenda' && <Agenda />}
 
           {currentView === 'clients' && <Clients />}
+          {currentView === 'financial' && <Financial />}
 
           {currentView === 'settings' && (
             <div className="flex flex-col items-center justify-center h-full text-slate-500 animate-fade-in">

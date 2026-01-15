@@ -4,6 +4,7 @@ import { BottomNav } from './components/BottomNav';
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';
 import { Agenda } from './components/Agenda';
+import { Clients } from './components/Clients';
 import { ViewState } from './types';
 
 const App: React.FC = () => {
@@ -31,15 +32,7 @@ const App: React.FC = () => {
           {currentView === 'dashboard' && <Dashboard />}
           {currentView === 'agenda' && <Agenda />}
 
-          {currentView === 'clients' && (
-            <div className="flex flex-col items-center justify-center h-full text-slate-500 animate-fade-in">
-              <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-              </div>
-              <h3 className="text-xl font-bold text-white">Gestão de Clientes</h3>
-              <p className="mt-2 text-sm">O módulo de clientes está em desenvolvimento.</p>
-            </div>
-          )}
+          {currentView === 'clients' && <Clients />}
 
           {currentView === 'settings' && (
             <div className="flex flex-col items-center justify-center h-full text-slate-500 animate-fade-in">

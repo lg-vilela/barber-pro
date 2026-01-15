@@ -20,11 +20,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentView, onChange }) => {
     <aside className="w-64 bg-surface-dark border-r border-white/5 flex flex-col h-full shrink-0">
       {/* Logo Area */}
       <div className="h-20 flex items-center px-6 border-b border-white/5 gap-3">
-        <div className="w-10 h-10 bg-gradient-to-br from-primary to-yellow-700 rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-          <Scissors className="text-white" size={20} />
-        </div>
+        <img 
+          src="https://i.postimg.cc/W1zqSsZ2/Hair-cut-removebg-preview.png" 
+          alt="HairCut Logo" 
+          className="w-12 h-12 object-contain"
+        />
         <div>
-          <h1 className="text-white font-display font-bold text-lg leading-none">BarberPro</h1>
+          <h1 className="text-white font-display font-bold text-lg leading-none">HairCut</h1>
           <p className="text-slate-500 text-xs font-medium mt-0.5">Management</p>
         </div>
       </div>
